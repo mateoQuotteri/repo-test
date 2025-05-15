@@ -1,3 +1,5 @@
+package FrontTest;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BasePage {
     public WebDriver driver;
 
-    public BasePage(WebDriver driver) {
+    public BasePage(WebDriver driver, Object o) {
         this.driver = driver;
     }
 

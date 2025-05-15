@@ -1,3 +1,5 @@
+package FrontTest;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -49,7 +51,7 @@ public class SearchTest {
 
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofMillis(5000));
-        basePage = new BasePage(driver);
+        basePage = new BasePage(driver, null);
         basePage.setup();
     }
 
