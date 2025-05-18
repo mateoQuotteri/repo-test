@@ -6,6 +6,8 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
 
+import static io.restassured.RestAssured.given;
+
 public class GETTest {
 
     @Test
@@ -39,6 +41,15 @@ public class GETTest {
         System.out.println("El correo del primer registro es: " + mail_0);
         System.out.println("El nombre del tercer registro es: " + nombre_2);
         System.out.println("El correo del tercer registro es: " + mail_2);
+    }
+
+    @Test
+    public void Get_Test03() {
+        given()
+                .get("https://reqres.in/api/users?page=2")
+                .then()
+                .statusCode(200)
+                .log().body(false);
     }
 
 }
