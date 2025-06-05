@@ -8,7 +8,7 @@ import org.testng.Assert;
 
 import static io.restassured.RestAssured.given;
 
-public class GETTest {
+public class   GETTest {
 
     @Test
     public void Get_Test01() {
